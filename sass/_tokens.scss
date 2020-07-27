@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+$font-title : 'New Rocker', cursive;
+$black : black;
+$border : 2px solid $black;
+$single-space : 10px;
+$doble-space : $single-space * 2;
+
+$h1 : 5em;
+$h2 : 1.5em;
+$h3 : 1.2em;
+$h4 : .8em;
+
+h1 {
+  font-size: $h1;
+}
+h2 {
+  font-size: $h2;
+}
+h3 {
+  font-size: $h3;
+}
+h4 {
+  font-size: $h4;
+}
+p {
+   font-size: 1em;
+}

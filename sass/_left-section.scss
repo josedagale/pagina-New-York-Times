@@ -1,0 +1,39 @@
+@mixin titleBorders {
+  padding: $doble-space;
+  position: relative;
+  // border-bottom: $border;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    border-bottom: $border;
+  }
+}
+
+.left-section {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  text-align: center;
+  &__title {
+    text-transform: uppercase;
+    @include titleBorders();
+  }
+  &__subtitle {
+    text-transform: uppercase;
+    @include titleBorders();
+  }
+  &__description {
+    @include titleBorders();
+  }
+  &__intro {
+    text-transform: uppercase;
+    padding: $doble-space 0;
+  }
+  &__parragraph {
+    padding: 0 $single-space;
+    text-align: justify;
+  }
+}
