@@ -1,0 +1,235 @@
+/* variables */
+/* aqui se controlan las fuentes, los colores y el espaciado */
+@font-face {
+  src: url('fonts/newyorktimes.ttf');
+  font-family: newyorktimes;
+}
+:root {
+  --main-font: newyorktimes;
+  --black-color: black;
+  --border: 2px solid var(--black-color);
+  --single-space: 10px;
+  --doble-space: 20px;
+  --h1: 5em;
+  --h2: 1.5em;
+  --h3: 1.2em;
+  --h4: .8em;
+  --p: 1em;
+}
+
+/* reinicio de los estilos y tamanos de fuente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+p {
+  font-size: var(--p);
+}
+
+/* estilos del layout */
+/* el layout se va a realizar con grid css
+el headeer y las tres columnas */
+.main-container {
+  display: grid;
+  grid-template-rows: repeat(2 1fr);
+  grid-template-columns: 15% 1fr 15%;
+  margin: 0 10%;
+}
+
+/* estilos del header */
+.header {
+  grid-column: 1 / span 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: var(--single-space);
+}
+.header__main-title, .header__subtitle {
+  width: 100%;
+  padding: var(--single-space) 0;
+  border-bottom: var(--border);
+}
+.header__main-title {
+  text-align: center;
+  font-family: var(--main-font);
+}
+
+/* estilos de la seccion izquierda */
+/* las lineas de division de los titulos se hacen con el seudoelemento :after */
+.left-section {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  text-align: center;
+}
+.left-section__title {
+  position: relative;
+  padding: var(--doble-space);
+  text-transform: uppercase;
+}
+.left-section__title::after {
+  content: '';
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-bottom: var(--border);
+}
+.left-section__subtitle {
+  padding: var(--doble-space);
+  position: relative;
+  text-transform: uppercase;
+}
+.left-section__subtitle::after {
+  content: '';
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-bottom: var(--border);
+}
+.left-section__description {
+  padding: var(--doble-space);
+  position: relative;
+}
+.left-section__description::after {
+  content: '';
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-bottom: var(--border);
+}
+.left-section__intro {
+  padding: var(--doble-space) 0;
+  text-transform: uppercase;
+}
+.left-section__parragraph {
+  padding: 0 var(--single-space);
+  text-align: justify;
+}
+
+/* estilos de la seccion principal, medio */
+.middle-section {
+  grid-row: 2 / span 1;
+  border-left: var(--border);
+  border-right: var(--border);
+  padding: 0 var(--single-space);
+}
+
+/* estilos del primer articulo de la seccion principal */
+/* articulo princpal, se caracteriza por la foto de gran tamano */
+.up-section {
+  border-bottom: var(--border);
+  padding-bottom: var(--single-space);
+}
+.up-section__img {
+  width: 100%;
+  margin-bottom: var(--single-space);
+}
+.up-section__img img {
+  width: 100%;
+  object-fit: cover;
+}
+.up-section__title {
+  margin-bottom: var(--single-space);
+}
+.up-section__description {
+  font-style: italic;
+}
+
+/* estilos de la segunda seccion */
+/* articulo corto, se caracteriza porque el contenido esta diagramado en columnas */
+.center-section {
+  border-bottom: var(--border);
+  padding: var(--doble-space) 0;
+}
+.center-section__title {
+  font-style: italic;
+  margin-bottom: var(--single-space);
+}
+.center-section__paragraph {
+  column-count: 4;
+  column-gap: var(--single-space);
+  text-align: center;
+}
+.center-section__paragraph-title {
+  padding: var(--doble-space) 0;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.center-section__paragraph-title::after {
+  content: '';
+  width: 60%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: var(--border);
+}
+.center-section__paragraph-text {
+  text-align: justify;
+}
+
+/* estilos de la tercera seccion */
+/* se caracteriza por tener una imagen que acompana el texto */
+.down-section {
+  padding: var(--doble-space) 0;
+  position: relative;
+}
+.down-section__title {
+  font-style: italic;
+}
+.down-section__content {
+  display: flex;
+  margin-top: var(--doble-space);
+}
+.down-section__paragraph {
+  width: 40%;
+  padding-right: var(--single-space);
+}
+.down-section__img {
+  width: 60%;
+}
+.down-section__img img {
+  width: 100%;
+}
+.down-section__comment {
+  margin-top: 20em;
+  margin-right: var(--doble-space);
+  margin-bottom: var(--single-space);
+  float: left;
+  shape-outside: border-box;
+  shape-margin: var(--single-space);
+  text-align: center;
+  border-bottom: var(--border);
+}
+
+/* estilos de la seccion derecha */
+/* es un espacio vacio del mismo ancho que la seccion izquierda */
+.right-section {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+  border-top: var(--border);
+  margin-left: var(--single-space);
+}
