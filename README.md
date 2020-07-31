@@ -88,12 +88,12 @@ Las declaraciones se estructuran en el siguiente orden:
 
 ```css
 .example-element {
- display: block;
- width: 220px;
- height: 40px;
- position: relative;
+  display: block;
+  width: 220px;
+  height: 40px;
+  position: relative;
   font-family: var(--main-font);
- text-transform: uppercase;
- background-color: #333333;
+  text-transform: uppercase;
+  background-color: #333333;
 }
 ```
