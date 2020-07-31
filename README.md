@@ -28,7 +28,7 @@ Se estructura usando grid:
   margin: 0 10%;
 }
 ```
-![layout de la página](https://res.cloudinary.com/dwjhnzbz3/image/upload/v1596153872/newYorkTimes/layout_z3auak.jpg "layout de la página")
+![img](.readme-static/layout.jpg)
 
 ## Componentes
 Los componentes se organizan basados en los articulos. Cada artículo tiene un contenedor que albega toda su información: títulos, subtitulos, descripciones, contenido e imágenes.
