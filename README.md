@@ -28,7 +28,7 @@ Se estructura usando grid:
   margin: 0 10%;
 }
 ```
-![layout de la página](https://res.cloudinary.com/dwjhnzbz3/image/upload/v1596153872/newYorkTimes/layout_z3auak.jpg "layout de la página")
+![img](.readme-static/layout.jpg)
 
 ## Componentes
 Los componentes se organizan basados en los articulos. Cada artículo tiene un contenedor que albega toda su información: títulos, subtitulos, descripciones, contenido e imágenes.
@@ -88,12 +88,12 @@ Las declaraciones se estructuran en el siguiente orden:
 
 ```css
 .example-element {
- display: block;
- width: 220px;
- height: 40px;
- position: relative;
+  display: block;
+  width: 220px;
+  height: 40px;
+  position: relative;
   font-family: var(--main-font);
- text-transform: uppercase;
- background-color: #333333;
+  text-transform: uppercase;
+  background-color: #333333;
 }
 ```
